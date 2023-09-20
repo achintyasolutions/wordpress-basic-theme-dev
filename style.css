@@ -2,13 +2,13 @@
 Theme Name: My Theme
 Author: Achintya Solutions
 Author URI: https://achintyasolutions.com
-Version: 1.0
+Version: 1.00
  */
 
  body {
     font-family: Arial, sans-serif;
     font-size: 16px;
-    color: #545454;
+    color: #545454; 
 }
 
 a:link {
