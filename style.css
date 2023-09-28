@@ -1,45 +1,400 @@
 /*
-Theme Name: My Theme
+Theme Name: Amity Properties
+Theme URI: https://achintyasolutions.com/
 Author: Achintya Solutions
-Author URI: https://achintyasolutions.com
-Version: 1.00
+Author URI: https://achintyasolutions.com/
+Description: Custom theme designed by Achintya Solutions
+Version: 1.0.0
+Requires at least: 5.3
+Tested up to: 6.3
+Requires PHP: 5.3
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: AchintyaSolutions
+Domain Path: /languages
+Tags: custom-menu, custom-logo, entertainment, one-column, two-columns, left-sidebar, e-commerce, right-sidebar, custom-colors, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, theme-options, threaded-comments, translation-ready, blog
  */
 
  body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     color: #545454; 
+    margin: 0 !important;
+    padding: 0;
+    font-size: 16px;
 }
 
-a:link {
-    color: #d14732;
+.container-main{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-a:visited {
-    color: #0d65bc;
+/* header css */
+.primary_nav{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    border-bottom: 1px solid #a69c9c;
 }
 
-p {
-    line-height: 1.7em;
+.primary_nav .site_logo img{
+    max-width: 200px;
+    height: auto;
 }
 
-div.container {
-    max-width: 960px;
-    margin: 0 auto;
+
+.primary_nav > .custom_button button{
+    padding: 10px 15px;
+    background-color: green;
+    color: aliceblue;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
 }
 
-article.post {
-    border-bottom: 4px dashed #ecf0f1;
+.primary_nav > .custom_button button:hover{
+    background-color: rgb(6, 60, 6);
+    cursor: pointer;
 }
 
-article.post:last-of-type {
-    border-bottom: none;
+.primary_nav div:nth-child(2){
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.site-header {
-    border-bottom: 3px solid #ecf0f1;
+.primary_nav ul {
+    list-style: none;
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    font-size: 16px;
 }
 
-.site-footer {
-    border-top: 3px solid #ecf0f1;
+.primary_nav ul li {
+    display: flex;
+}
+
+.primary_nav a{
+    color: #545454;
+    text-decoration: none;
+}
+
+.primary_nav a:hover{
+    color: rgb(208, 49, 49);
+}
+
+/* header end */
+
+
+
+/* footer css */
+
+.site-footer{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4% 5%;
+    background-color: #004274;
+    font-size: 16px;
+}
+
+.site-footer a{
+    color: rgb(228, 229, 230);
+}
+
+.site-footer .col_1, .col_2 {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: center;
+    gap: 20px;
+}
+
+.site-footer .col_3{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.site-footer .col_3 div:nth-child(1){
+    display: flex;
+    gap: 10px;
+}
+
+.site-footer .col_3 div:nth-child(2){
+    color: #fff;
+}
+
+.site-footer .col_3 input{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: rgb(226, 225, 225);
+    width: 80%;
+    border-radius: 5px;
+}
+
+.site-footer .col_3 button{
+    padding: 10px 15px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(46, 158, 203);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+
+
+
+/* footer end */
+
+/* home content css */
+
+.home_content{
+    height: 100vh;
+    background-image:url('http://localhost/amity/wp-content/uploads/2023/09/background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+}
+
+.formTab{
+    min-width: 900px;
+}
+
+.home_content h2{
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    transform: translateY(-40px);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.tabUI{
+    transform: translateY(-70px);
+}
+
+.nav-tabs li {
+    margin-right: 5px;
+    font-size: 16px;
+    color:black;
+}
+
+.nav-tabs .nav-item .nav-link {
+    background-color: #0080FF;
+    color: #FFF;
+  }
+  
+  .nav-tabs .nav-item .nav-link.active {
+    color: #0080FF;
+  }
+  
+  .tab-content {
+    position: relative;
+    padding: 20px 20px;
+    border: 1px solid #dee2e6;
+    border-top: transparent;
+    box-sizing: border-box;
+  }
+  
+  .tab-content .tab-pane {
+    background-color: #FFF;
+    color: #0080FF;
+    height: auto;
+  }
+
+.tab-content{
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+
+.formInputs{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.formInputs div:nth-child(1){
+    flex: 2;
+}
+
+.formInputs div:nth-child(2){
+    flex: 3;
+}
+
+.formInputs div:nth-child(3){
+    flex: 1;
+}
+
+.formInputs div:nth-child(4){
+    flex: 1;
+}
+
+.formInputs div:nth-child(5){
+    flex: 0.5;
+}
+
+.formInputs button{
+    padding: 5px 10px;
+    background-color: red;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+}
+
+
+#newpost {
+    display: none;
+  }
+  
+  #newpost.visible {
+    display: block;
+  }
+
+
+.advanceFormInput{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+.advanceFormInput a{
+    
+}
+  
+#advanceBtn{
+    position: relative;
+    margin-top: 10px 0;
+}
+
+.advanceInputs{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.advanceInputs div:nth-child(1){
+    flex:2;
+}
+
+.advanceInputs div:nth-child(2){
+    flex:3;
+}
+
+.advanceText{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: flex-end;
+    
+}
+
+
+/* property list */
+
+
+.property-list{
+    position: relative;
+    margin: 20px 10px;
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.property-list h2{
+    font-size: 3rem;
+    font-weight: 600;
+    margin:20px 0px;
+    text-transform: capitalize;
+}
+
+.card-deck{
+    padding: 10px 10px;
+}
+
+.property-list .card-title{
+color: black;
+font-size: 18px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.property-list  .card-text{
+    font-size: 12px;
+}
+
+.property-list .p-attributes{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 10px;
+    font-size: 16px;
+    color: #313131 !important;
+    padding-bottom: 5px;
+}
+
+.property-list .p-attributes div span{
+    margin-right: 5px;
+}
+
+.property-list .btnActions {
+    border-top: 1px solid rgba(173, 173, 173, 0.5);
+    padding-top: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.property-list .btnActions button{
+    color: rgb(53, 219, 53);
+    padding: 5px 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid rgb(53, 219, 53);
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+/* home content end */
+
+
+/* 404 page */
+
+.page-wrap{
+    position: relative;
+    background-color: #0080FF;
+    height: 80vh;
+}
+
+
+.liveSearchCss{
+    width: 300px;
+    min-width: 300px;
 }
