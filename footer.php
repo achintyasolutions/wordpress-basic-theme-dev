@@ -32,21 +32,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script> -->
 
     <script type="text/javascript">
-    jQuery(document).ready(function () {
-      jQuery(".chosen-select").chosen({
-          search_contains: true,
-          no_results_text: "Nothing found for: ",
-          width: "100%",
-      });
-    });
     jQuery('#searchBox').chosen({
-
-    allow_single_deselect: true
+        search_contains: false,
+        allow_single_deselect: false,
+        no_results_text: "Try another region or area ",
+        width: "100%"
     });
+    jQuery(".chosen-choices").css({'padding':'.275rem .75rem',
+        'border-radius': '.25rem', 'background-clip':'padding-box'
+        ,'border': '1px solid #ced4da', 'font-size':'1rem', 'height':'45px', 'display':"flex", 'flex-direction':'row', 'align-items':'center', 'box-shadow':'none', 
+    });
+
+    jQuery(".chosen-choices.search-choice").css({'padding': '8px 20px 8px 5px !important', 'background-color': 'green'
+    });
+
+ 
+
+    jQuery(".chosen-search-input").css({'width':'100%'});
+    jQuery(".chosen-choices li").css({'width':'140px'});
+    jQuery(".formInputs select").css({'height':'45px'});
+    jQuery("select option").css({'color':'#999'});
+
+
     </script>
     <script type="text/javascript">
     jQuery(document).ready(function(){
         jQuery(".chosen").chosen();
+        jQuery("li.search-choice").css({});
     });
     </script>
 
