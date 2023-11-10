@@ -40,7 +40,7 @@
               id="bedsSelect"
               class="form-control"
               name="beds"
-              style="display: block"
+              style="display:block"
             >
               <option value="" selected>Beds</option>
               <?php
@@ -60,7 +60,7 @@
               id="selectAreaCmrcl"
               class="form-control"
               name="beds"
-              style="display: none"
+              style="display:"
             >
               <option value="" selected>Select Area</option>
               <?php

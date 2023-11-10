@@ -307,7 +307,6 @@ Tags: custom-menu, custom-logo, entertainment, one-column, two-columns, left-sid
     margin: 20px 10px;
     padding: 20px 100px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -406,6 +405,5 @@ text-overflow: ellipsis;
     align-items: center;
     flex-direction: column;
 }
-
 
 /* (END) property search page */
