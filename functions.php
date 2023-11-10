@@ -25,6 +25,7 @@ function my_scripts()
     wp_enqueue_style('chosen_styles', 'https://harvesthq.github.io/chosen/chosen.css', false);
     wp_enqueue_script('chosen_js', 'https://harvesthq.github.io/chosen/chosen.jquery.js', array('jquery'), null, true);
     wp_enqueue_style('style', get_stylesheet_uri());
+    wp_enqueue_style('style-footer', get_template_directory_uri().'/footerStyle.css');
 
 }
 
@@ -96,11 +97,16 @@ function ajax_fetch()
                             console.log(data.data[0]);
                             if(data.data[0] == '27'){
                                 jQuery('#bedsSelect').css({'display': 'none'});
-                                jQuery('#selectAreaCmrcl').css({'display': 'block'});
-                                
+                                jQuery('#areaSelect').css({'display': 'block'});
+                                jQuery('#areaSelectAdvance').css({'display': 'none'});
+                                jQuery('#advanceFormInput').addClass('oneColGrid');
+                                jQuery('#advanceFormInput').removeClass('twoColGrid');
                             }else{
                                 jQuery('#bedsSelect').css({'display': 'block'});
-                                jQuery('#selectAreaCmrcl').css({'display': 'none'});
+                                jQuery('#areaSelect').css({'display': 'none'});
+                                jQuery('#areaSelectAdvance').css({'display': 'block'});
+                                jQuery('#advanceFormInput').addClass('twoColGrid');
+                                jQuery('#advanceFormInput').removeClass('oneColGrid');
                             }
 
                         }

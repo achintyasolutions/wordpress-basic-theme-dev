@@ -181,8 +181,11 @@ Tags: custom-menu, custom-logo, entertainment, one-column, two-columns, left-sid
 }
 
 .formTab{
-    max-width: 1400px;
-    min-width: 400px;
+    max-width: 65rem;
+    margin: 0 auto;
+    width: 90%;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
 }
 
 .home_content h2{
@@ -236,12 +239,12 @@ Tags: custom-menu, custom-logo, entertainment, one-column, two-columns, left-sid
 .formInputs{
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: minmax(0,max-content) minmax(35rem,auto) minmax(0,max-content) minmax(0,min-content) minmax(0,max-content) auto;
-    max-width: 980px;
+    grid-template-columns: minmax(0,max-content) 1fr minmax(0,max-content) minmax(0,max-content) minmax(0, auto) minmax(0, auto);
+    width: 100%;
 }
 
 
-.formInputs button{
+#searchBtn{
     padding: 5px 10px;
     background-color: red;
     color: #FFF;
@@ -273,17 +276,17 @@ Tags: custom-menu, custom-logo, entertainment, one-column, two-columns, left-sid
 }
 
 .advanceInputs{
-    display: flex;
-    gap: 10px;
+    display: grid;
+    grid-gap: 10px;
     width: 100%;
 }
 
-.advanceInputs div:nth-child(1){
-    flex:2;
+.oneColGrid{
+    grid-template-columns: 1fr;
 }
 
-.advanceInputs div:nth-child(2){
-    flex:3;
+.twoColGrid{
+    grid-template-columns: minmax(0,max-content) 1fr;
 }
 
 .advanceText{
@@ -372,6 +375,367 @@ text-overflow: ellipsis;
     justify-content: center;
 }
 
+#bedsSelect{
+    position: relative;
+}
+
+
+#selectedVal{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #bbb8bd;
+    border-radius : 3px;
+    cursor: pointer;
+    box-sizing: border-box;
+    align-items: center;
+    height: 48px;
+    transition: border-color 0.15s linear;
+    will-change : border-color;
+    gap: 10px;
+    user-select: none;
+}
+
+#selectedVal:hover{
+    border-color:#0073cb;
+}
+
+#selectOptions{
+    position: absolute;
+    background-color: #ffff;
+    width: 400px;
+    z-index: 100;
+    padding: 20px 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+
+#selectOptions div h3{
+    color: #403b45;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: calc(0.6rem*2);
+}
+
+.show-hide-toggle{
+    display: none;
+}
+
+.chip-filter__item {
+    margin-right: calc(0.8rem*0.2)
+}
+
+.bed-and-bath-selector__choice{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+input[type=checkbox] {
+    height: 0;
+    opacity: 1;
+    position: absolute;
+    width: 0;
+}
+
+.bed-and-bath-selector__field__choices{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: calc(0.6rem*2);
+    gap: 2px;
+}
+
+.chip-choice__item-input, .chip-filter__input{
+    display: block;
+}
+
+.chip{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #f7f5f5;
+    border: 0.1rem solid transparent;
+    border-radius: 0.5rem;
+    color: #403b45;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    line-height: 2.4rem;
+    padding: 0.6rem  0.6rem;
+    position: relative;
+    -webkit-tap-highlight-color: #00000000;
+    -webkit-transition: border-color 0.15s ease-in-out;;
+    transition: border-color 0.15s ease-in-out;
+    white-space: nowrap;
+    width: 100%;
+    will-change: border-color;
+    text-transform: capitalize;
+    /* font-size: 1.4rem; */
+    line-height: normal;
+}
+
+.chip--selected{
+    background-color: #e8f4f6;
+    border-color: #007ea8;
+    color: #007ea8;
+}
+
+.chip:hover{
+    background-color: #e3e3e3;
+}
+
+.bed-and-bath-selector__choice-chip{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+
+.dropdown-wrapper__footer{
+    border-top: 0.1rem solid #e4e4e4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: calc(0.3rem*8.33);
+    padding: calc(0.6rem*1) 0;
+}
+
+
+.dropdown-wrapper__footer-action{
+    color: #007ea8;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 calc(0.3rem*1);
+}
+
+.bed-and-bath-selector__clear-button{
+    background: none;
+    color: #007ea8;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+
+
+/* price select css */
+
+
+#priceSelect{
+    position: relative;
+}
+
+#selectedPriceVal, #selectedAreaVal{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #bbb8bd;
+    border-radius : 3px;
+    cursor: pointer;
+    box-sizing: border-box;
+    align-items: center;
+    height: 48px;
+    transition: border-color 0.15s linear;
+    will-change : border-color;
+    gap: 10px;
+    user-select: none;
+}
+
+#priceMainBox{
+    padding: 0px 5px;
+    white-space: nowrap;    
+
+}
+
+#selectPriceOptions, #selectAreaOptions{
+
+position: absolute;
+background-color: #ffff;
+width: 400px;
+z-index: 100;
+padding: 20px 20px;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+border-radius: 10px;
+margin-top: 5px;
+right: 0;
+}
+
+
+#selectPriceOptions div h3{
+color: #403b45;
+font-size: 1rem;
+font-weight: 700;
+line-height: 1.5;
+margin-bottom: calc(0.6rem*2);
+}
+
+.priceContent{
+    padding: 10px 10px;
+}
+
+.dropdown-box{
+    padding: 10px 5px;
+    position: absolute;
+    z-index: 10000;
+    left: 0;
+    top: 100%;
+    /* width: 100%; */
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 10px;
+    display: none;
+}
+
+.select_price-container{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.select_price-input{
+    position: relative;
+}
+
+.price_select-ul{
+    list-style: none;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.price_select-ul li {
+    padding: 10px 15px;
+}
+
+.dropdown-list_item-content{
+    border-radius: 5px;
+    color: #403b45;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    -webkit-transition: background-color var(--transition-duration3) var(--transition-logic3);
+    transition: background-color 0.15s ease-in-out;
+    white-space: nowrap;
+    will-change: background-color;
+    cursor: pointer;
+    text-align: inherit;
+    width: 100%;
+}
+
+
+
+.dropdown-list_item-content:hover{
+    background-color: #e8f4f6;
+}
+
+.btn-noBg{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 0;
+    width: auto;
+}
+
+
+.show-box{
+    display: block;
+}
+
+
+.range-divider{
+    padding: 10px 10px;
+}
+
+
+.inputField {
+    position: relative;
+  }
+  
+  .inputField input {
+    padding: 8px 20px;
+    padding-top: 18px;
+    border: 1.8px solid rgba(107, 107, 107, 0.4);
+    border-radius: 3px;
+    width: 100%;
+    color: black;
+  }
+  
+  .inputField input:focus {
+    border: 1.8px solid #6b6b6b;
+    outline: none;
+  }
+  
+  .inputField span {
+    pointer-events: none;
+    opacity: 0.5;
+    position: absolute;
+    padding-left: 20px;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: text;
+  }
+  
+  .inputField input:focus+span,
+  .inputField input:not(:placeholder-shown)+span, .translateText {
+    top: 7px;
+    -webkit-transform: scale(0.7) translateY(-10%) translateX(-8.5px);
+    transform: scale(0.7) translateY(-30%) translateX(-18.5px);
+  }
+  
+  .inputField input,
+  .inputField span {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  
+
+/* price select end */
+
+
+/* area select (START) */
+
+#areaSelect {
+    position: relative;
+    display: none;
+}
+
+#areaSelectAdvance{
+    position: relative;
+    display: block;
+}
+
+/* area select (END) */
+
+
+
 /* home content end */
 
 
@@ -409,3 +773,10 @@ text-overflow: ellipsis;
 
 
 /* (END) property search page */
+
+
+
+
+
+
+
